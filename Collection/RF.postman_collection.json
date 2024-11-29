@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "b79ba7c5-f091-464e-88c1-f08ef0233166",
+		"name": "RF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37575621"
+	},
+	"item": [
+		{
+			"name": "Crear Ciudad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Valle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Ciudades/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Ciudades",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Sucursl AdNDES\",\r\n    \"tamanio\": 150.0,\r\n    \"direccion\": \"Cale 12, Bosa\",\r\n    \"telefono\": 12556789,\r\n    \"codigo_Ciudad\": {\r\n       \"codigo\":1\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Sucursales/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Sucursales",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Bodega",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"nombre\": \"Bodega Eusebio\",\r\n    \"tamanio\": 300.0,\r\n    \"sucursal\": {\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Bodegas/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Bodegas",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Categoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"caracteristicasAlmacenamiento\": \"Almacenar en lugar seco\",\r\n    \"nombre\": \"Alimento\",\r\n    \"descripcion\": \"Productos perecederos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Categorias/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Categorias",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear proveedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telefonoContacto\": 3001782233,\r\n    \"nit\": 12345678985,\r\n    \"direccion\": \"Cal Provee important\",\r\n    \"nombreContacto\": \"Joao Estradi\",\r\n    \"nombre\": \"Proveedor Exotico\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proveedores/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proveedores",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"precioUnitarioVenta\": 1.5,\r\n    \"cantidadPresentacion\": 1,\r\n    \"id_EspecificacionEmpacado\": {\r\n        \"id\": 2\r\n    },\r\n    \"codigo_categoria\": {\r\n        \"codigo\": 5\r\n    },\r\n    \"nombre\": \"arroz\",\r\n    \"unidadMedida\": \"kg\",\r\n    \"presentacion\": \"Bolsa de 1 kg\",\r\n    \"fechaExpiracion\": \"2024-12-31T05:00:00.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Productos/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Productos",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear info orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoBarras\":{\r\n        \"codigoBarras\": 1160\r\n    },\r\n    \"OrdenCompra\": {\r\n        \"id\": 6 \r\n    },\r\n    \"cantidad\": 16,  \r\n    \"costoUnitarioCompra\": 2.5  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/InfoExtraOrdenes/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"InfoExtraOrdenes",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una Orden de compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaEntrega\": \"2025-01-19T05:00:00.000+00:00\",\r\n    \"fechaCreacion\": \"2024-01-05T05:00:00.000+00:00\",\r\n    \"id_Sucursal\": {\r\n        \"id\": 1\r\n    },\r\n    \"nit_proveedor\": {\r\n        \"nit\": 9001234567\r\n    },\r\n    \"estado\": \"vigente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/OrdenesCompra/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"OrdenesCompra",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nueva Recepcion Compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaRecepcion\": \"2026-11-03T00:00:00\",\r\n    \"id_Bodega\": {\r\n        \"id\": 5\r\n    },\r\n    \"id_OrdenCompra\": {\r\n        \"id\": 2\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/RecepcionProductos/new/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"RecepcionProductos",
+						"new",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Bodega",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bodegas/139/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bodegas",
+						"139",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer una categoria",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Categorias/codigo?codigo=186",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Categorias",
+						"codigo"
+					],
+					"query": [
+						{
+							"key": "codigo",
+							"value": "186"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer categorias",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							" \r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Codigo</th>\r",
+							"        <th>Nombre</th>\r",
+							"        <th>Descripcion</th>\r",
+							"        <th>caracteristicasAlmacenamiento</th>\r",
+							"    </tr>\r",
+							"    \r",
+							"    {{#each response}}\r",
+							"        <tr>\r",
+							"            <td>{{codigo}}</td>\r",
+							"            <td>{{nombre}}</td>\r",
+							"            <td>{{descripcion}}</td>\r",
+							"            <td>{{caracteristicasAlmacenamiento}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"    \r",
+							"</table>\r",
+							"`;\r",
+							" \r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							" \r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Categorias"
+					],
+					"query": [
+						{
+							"key": "codigo",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer un producto",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Productos/codigo?codigo=1159",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Productos",
+						"codigo"
+					],
+					"query": [
+						{
+							"key": "codigo",
+							"value": "1159"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar todas las ordenes de compra",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"\r",
+							"    <table class=\"tftable\" border=\"1\">\r",
+							"        <tr>\r",
+							"            <th>ID</th>\r",
+							"            <th>Fecha Entrega</th>\r",
+							"            <th>Nit Proveedor</th>\r",
+							"            <th>Estado</th>\r",
+							"            <th>fecha Creacion</th>\r",
+							"            <th>Id Sucursal</th>\r",
+							"            <th>Teléfono </th>\r",
+							"            <th>Nombre</th>\r",
+							"            <th>tamaño</th>\r",
+							"            \r",
+							"        </tr>\r",
+							"        {{#each response}}\r",
+							"        <tr>\r",
+							"            <td>{{id}}</td>\r",
+							"            <td>{{fechaEntrega}}</td>\r",
+							"            <td>{{nit_proveedor}}</td>\r",
+							"            <td>{{estado}}</td>\r",
+							"            <td>{{fechaCreacion}}</td>\r",
+							"            <td>{{id_Sucursal}}</td>\r",
+							"            <td>{{telefono}}</td>\r",
+							"            <td>{{nombre}}</td>\r",
+							"            <td>{{tamanio}}</td>\r",
+							"\r",
+							"        </tr>\r",
+							"        {{/each}}\r",
+							"    </table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							" \r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/OrdenesCompra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"OrdenesCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un proveedor",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proveedores/Update?nit=9045678901&contacto=Antonio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proveedores",
+						"Update"
+					],
+					"query": [
+						{
+							"key": "nit",
+							"value": "9045678901"
+						},
+						{
+							"key": "contacto",
+							"value": "Antonio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un producto",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Productos/Update?codBar=1155&cantidad=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Productos",
+						"Update"
+					],
+					"query": [
+						{
+							"key": "codBar",
+							"value": "1155"
+						},
+						{
+							"key": "cantidad",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar una ordenCompra",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/OrdenCompra/id?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"OrdenCompra",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
